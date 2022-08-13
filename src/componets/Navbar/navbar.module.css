@@ -1,0 +1,16 @@
+.nav {
+    grid-area: nav;
+    background-color: bisque;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    margin-top: 15px;
+}
+
+.nav ul li:last-child{
+    margin-top: 30px;
+}
