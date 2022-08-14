@@ -14,3 +14,8 @@
 .nav ul li:last-child{
     margin-top: 30px;
 }
+
+.active-link {
+    text-decoration: underline;
+    font-weight: 700;
+}
