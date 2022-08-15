@@ -25,8 +25,8 @@ const MessagesItem = (props) => {
 
 const Dialogs = (props) => {
   debugger;
-  let dialogsElements = props.dialogs.map(dialog => <ContactItem name={dialog.name} id={dialog.id}></ContactItem>)
-  let messagesElements = props.messages.map(message => <MessagesItem message={message.message}></MessagesItem>)
+  let dialogsElements = props.dialogsPage.dialogs.map(dialog => <ContactItem name={dialog.name} id={dialog.id}></ContactItem>)
+  let messagesElements = props.dialogsPage.messages.map(message => <MessagesItem message={message.message}></MessagesItem>)
 
      return ( <div className={s.wrapperDialogs}>
         <div className={s.contactDialogs}>
