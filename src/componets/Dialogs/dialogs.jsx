@@ -20,23 +20,15 @@ const MessagesItem = (props) => {
   );
 }
 
-let dialogs = [
-  {id: 1, name: "Fred"},
-  {id: 2, name: "Jhon"},
-  {id: 3, name: "Steve"},
-]
 
-let messages = [
-  {message: "Hello! My Friend"},
-  {message: "How are you?"}
-]
 
-let dialogsElements = dialogs.map(dialog => <ContactItem name={dialog.name} id={dialog.id}></ContactItem>)
-let messagesElements = messages.map(message => <MessagesItem message={message.message}></MessagesItem>)
 
-const Dialogs = () => {
-    return (
-      <div className={s.wrapperDialogs}>
+const Dialogs = (props) => {
+  debugger;
+  let dialogsElements = props.dialogs.map(dialog => <ContactItem name={dialog.name} id={dialog.id}></ContactItem>)
+  let messagesElements = props.messages.map(message => <MessagesItem message={message.message}></MessagesItem>)
+
+     return ( <div className={s.wrapperDialogs}>
         <div className={s.contactDialogs}>
           { dialogsElements }
         </div>

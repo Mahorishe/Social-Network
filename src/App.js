@@ -8,7 +8,7 @@ import Profile from './componets/Profile/profile';
 import Dialogs from './componets/Dialogs/dialogs';
 
 
-function App() {
+function App(props) {
 
   return (
    <BrowserRouter>
@@ -18,7 +18,7 @@ function App() {
       <div className='wrapper-content'>
       <Routes>
         <Route path="/profile" element={<Profile/>}/>
-        <Route path="/dialogs" element={<Dialogs/>}/>
+        <Route path="/dialogs" element={<Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
       </Routes>
       </div>
 
