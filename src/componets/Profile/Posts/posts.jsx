@@ -4,12 +4,17 @@ import MyPost from './MyPost/myPost'
 import Post from './Post/post'
 
 
-const Posts = () => {
+const Posts = (props) => {
+  let postsElement = props.profilePage.posts.map(post=> <Post message={post.message} id={post.id} likeCount={post.likeCount}></Post>)
     return (
       <div>
-        <MyPost/>
-        <Post message="Hello/ My friends" count="5"/>
-        <Post message="How are you?" count="14"/>
+        <MyPost addPost={props.addPost} 
+                newPostText={props.profilePage.newPostText}
+                updateTextArea={props.updateTextArea}/>
+        <div>
+          {postsElement}
+        </div>
+
       </div>
     );
 }

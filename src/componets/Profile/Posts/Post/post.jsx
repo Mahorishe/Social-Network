@@ -2,6 +2,7 @@ import React from "react";
 import p from './post.module.css'
 
 const Post = (props) => {
+  debugger;
     return (
       <div>
         <img className={p.avatar} src='https://i.yapx.ru/Ra8I0.jpg'/>

@@ -2,14 +2,15 @@ import React from "react";
 import Banner from "./Banner/banner";
 import AvaDesc from "./AvaDesc/avadesc";
 import Posts from "./Posts/posts";
-import s from "./profile.module.css";
 
-const Profile = () => {
+const Profile = (props) => {
     return (
       <div>
         <Banner/>
         <AvaDesc/>
-        <Posts/>
+        <Posts profilePage={props.profilePage} 
+               addPost={props.addPost}
+               updateTextArea={props.updateTextArea}/>
       </div>
 
     );
